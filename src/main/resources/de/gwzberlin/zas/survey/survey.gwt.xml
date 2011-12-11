@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module rename-to="survey">
+	<inherits name="com.google.gwt.user.User" />
+	<inherits name="com.google.gwt.user.theme.standard.Standard" />
+	<inherits name="com.google.gwt.activity.Activity" />
+	<inherits name="com.google.gwt.place.Place" />
+
+	<entry-point class="de.gwzberlin.zas.survey.client.Survey" />
+
+	<replace-with class="de.gwzberlin.zas.survey.client.ClientFactoryImpl">
+		<when-type-is class="de.gwzberlin.zas.survey.client.ClientFactory" />
+	</replace-with>
+
+	<source path="client" />
+	<source path="shared" />
+</module>

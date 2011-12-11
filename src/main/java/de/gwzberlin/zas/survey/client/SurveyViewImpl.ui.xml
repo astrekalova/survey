@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder" xmlns:g="urn:import:com.google.gwt.user.client.ui" xmlns:c="urn:import:com.google.gwt.user.cellview.client">
+	<ui:style>
+		.title {
+			font-size: large;
+			color: #0099CC;
+			font: Lucida Sans
+		}	
+		.lable {
+			font-size: large;
+			color: #0099CC;
+			font: Lucida Sans
+		}	
+		.gwt-ListBox {}
+	</ui:style>
+
+	<g:LayoutPanel>
+		<g:layer left="100px" top="20px" width="1000px" height="30px">
+			<g:DockLayoutPanel unit="PX">
+				<g:center>
+					<g:Label addStyleNames="{style.title}">Stellen Sie sich vor, dass Sie ein Sofa kaufen möchten. Wie würde dieses Sofa aussehen?</g:Label>
+				</g:center>
+			</g:DockLayoutPanel>
+		</g:layer>
+		<g:layer left="100px" top="50px" width="350px" height="55px">
+			<g:DockLayoutPanel unit="PX">
+				<g:north size="30">
+					<g:Label>Welche Farbe würden Sie für das Sofa auswählen?</g:Label>
+				</g:north>
+				<g:center>
+					<g:ListBox addStyleNames="{style.gwt-ListBox}" ui:field="colors"/>
+				</g:center>
+			</g:DockLayoutPanel>
+		</g:layer>
+		<g:layer left="100px" top="110px" width="350px" height="55px">
+			<g:DockLayoutPanel unit="PX">
+				<g:north size="30">
+					<g:Label>Welches Material würden Sie für das Sofa auswählen?</g:Label>
+				</g:north>
+				<g:center>
+					<g:ListBox ui:field="materials"/>
+				</g:center>
+			</g:DockLayoutPanel>
+		</g:layer>
+	</g:LayoutPanel>	
+</ui:UiBinder>

@@ -2,3 +2,7 @@
 /.classpath
 /.project
 /target
+/.gwt
+gwt-unitCache
+/src/main/webapp/survey
+/src/main/webapp/WEB-INF/deploy

@@ -1,1 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<materials>
+	<material>
+		<name></name>		
+		<eqclasses>
+			<eqclass>
+				<number>1</number>
+				<name>Rattan</name>
+			</eqclass>			
+			<eqclass>
+				<number>1</number>
+				<name>Plastik</name>
+			</eqclass>
+			<eqclass>
+				<number>1</number>
+				<name>Leder</name>
+			</eqclass>
+			<eqclass>
+				<number>2</number>
+				<name>Rattan</name>
+			</eqclass>
+			<eqclass>
+				<number>1</number>
+				<name>Rattan</name>
+			</eqclass>
+			<eqclass>
+				<number>1</number>
+				<name>Rattan</name>
+			</eqclass>		
+		</eqclasses>
+	</material>	
+</materials>

@@ -18,30 +18,31 @@ public class SurveyViewImpl extends Composite implements SurveyView {
 	private static final SurveyUiBinder uiBinder = GWT.create(SurveyUiBinder.class);
 
 	private Presenter presenter;
-	
+
 	@UiField
 	ListBox colors;
 	
-	@UiField
-	ListBox materials;
+//	@UiField
+//	ListBox materials;
 	
 	public SurveyViewImpl() {
 		
-		colors = new ListBox(false);
-		List<String> allColors = Arrays.asList("rot","blau", "gelb");
-		for (int i = 0; i < allColors.size(); i++) {
-			colors.addItem(allColors.get(i));
-			
-		}
-		colors.ensureDebugId("colors-dropBox");
-		
-		materials = new ListBox(false);
-		List<String> allMaterials = Arrays.asList("Leder","Baumwolle", "Seide");
-		for (int i = 0; i < allMaterials.size(); i++) {
-			materials.addItem(allMaterials.get(i));
-		}
-		
 		initWidget(uiBinder.createAndBindUi(this));
+		
+		List<String> allColors = Arrays.asList("rot", "blau", "gelb");
+		
+		for (String color : allColors) {
+			colors.addItem(color);
+		}
+		
+		
+//		materials = new ListBox(false);
+//		List<String> allMaterials = Arrays.asList("Leder","Baumwolle", "Seide");
+//		for (int i = 0; i < allMaterials.size(); i++) {
+//			materials.addItem(allMaterials.get(i));
+//		}
+//		materials.setVisibleItemCount(1);
+		
 	}
 
 	public void setPresenter(Presenter presenter) {

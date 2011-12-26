@@ -32,15 +32,15 @@
 				</g:center>
 			</g:DockLayoutPanel>
 		</g:layer>
-<!-- 		<g:layer left="100px" top="110px" width="350px" height="55px"> -->
-<!-- 			<g:DockLayoutPanel unit="PX"> -->
-<!-- 				<g:north size="30"> -->
-<!-- 					<g:Label>Welches Material würden Sie für das Sofa auswählen?</g:Label> -->
-<!-- 				</g:north> -->
-<!-- 				<g:center> -->
-<!-- 					<g:ListBox addStyleNames="{style.gwt-ListBox}" ui:field="materials"/> -->
-<!-- 				</g:center> -->
-<!-- 			</g:DockLayoutPanel> -->
-<!-- 		</g:layer> -->
+		<g:layer left="100px" top="110px" width="350px" height="55px">
+			<g:DockLayoutPanel unit="PX">
+				<g:north size="30">
+					<g:Label>Welches Material würden Sie für das Sofa auswählen?</g:Label>
+				</g:north>
+				<g:center>
+					<g:ListBox addStyleNames="{style.gwt-ListBox}" ui:field="materials"/>
+				</g:center>
+			</g:DockLayoutPanel>
+		</g:layer>
 	</g:LayoutPanel>	
 </ui:UiBinder>

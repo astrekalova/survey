@@ -42,5 +42,15 @@
 				</g:center>
 			</g:DockLayoutPanel>
 		</g:layer>
+		<g:layer left="100px" top="160px" width="350px" height="100px">
+			<g:DockLayoutPanel unit="PX">
+				<g:north size="30">
+					<g:Label>Welche andere Wertkombinationen würden sie auswählen?</g:Label>
+				</g:north>
+				<g:center>
+					<g:ListBox ui:field="list"/>
+				</g:center>
+			</g:DockLayoutPanel>
+		</g:layer>
 	</g:LayoutPanel>	
 </ui:UiBinder>

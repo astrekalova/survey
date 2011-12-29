@@ -12,4 +12,6 @@ public interface SurveyView extends IsWidget {
 	{
 		
 	}
+
+	void addAlternative(String chatEntry);
 }

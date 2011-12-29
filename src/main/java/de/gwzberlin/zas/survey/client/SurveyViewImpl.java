@@ -4,8 +4,10 @@ import java.util.Arrays;
 import java.util.List;
 
 import com.google.gwt.core.client.GWT;
+import com.google.gwt.event.dom.client.ClickEvent;
 import com.google.gwt.uibinder.client.UiBinder;
 import com.google.gwt.uibinder.client.UiField;
+import com.google.gwt.uibinder.client.UiHandler;
 import com.google.gwt.user.cellview.client.CellTable;
 import com.google.gwt.user.cellview.client.TextColumn;
 import com.google.gwt.user.client.Timer;
@@ -36,10 +38,14 @@ public class SurveyViewImpl extends Composite implements SurveyView {
 	ListBox materials;
 	
 	@UiField(provided = true)
-	CellTable<String> alternatives;
+	CellTable<String> alternativesTable;
 	
 	@UiField
 	ScrollPanel alternativesScroller;
+
+	private String selectedColor;
+
+	private String selectedMaterial ;
 	
 	public SurveyViewImpl() {
 		
@@ -53,15 +59,15 @@ public class SurveyViewImpl extends Composite implements SurveyView {
 		}	
 
 		//if color + material are selected, show list
-		alternatives = new CellTable<String>(300);
-		alternatives.setWidth("100%");
-		alternatives.addColumn(new TextColumn<String>() {
+		alternativesTable = new CellTable<String>(300);
+		alternativesTable.setWidth("100%");
+		alternativesTable.addColumn(new TextColumn<String>() {
 			public String getValue(String object) {
 				return object;
 			}
 		});
 		
-		alternativesDataProvider.addDataDisplay(alternatives);
+		alternativesDataProvider.addDataDisplay(alternativesTable);
 	}
 	
 	public void addAlternative(String alternative) {
@@ -74,11 +80,21 @@ public class SurveyViewImpl extends Composite implements SurveyView {
 		}.schedule(1);
 	}
 
+	@UiHandler("colors")
+	public void onChangeColors(ClickEvent event) {
+		selectedColor = colors.getItemText(colors.getSelectedIndex());
+	}
+	
+	@UiHandler("materials")
+	public void onChangeMaterials(ClickEvent event) {
+		selectedMaterial = materials.getItemText(materials.getSelectedIndex());
+	}
+	
 	public void setPresenter(Presenter presenter) {
 		this.presenter = presenter;
 	}
 
 	public void clear() {
-		
+		alternativesDataProvider.getList().clear();
 	}
 }

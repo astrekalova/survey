@@ -49,7 +49,7 @@
 				</g:north>
 				<g:center>
 					<g:ScrollPanel ui:field="alternativesScroller">				
-						<g:ListBox ui:field="alternatives"/>
+						<c:CellTable ui:field="alternativesTable"/>
 					</g:ScrollPanel>
 				</g:center>
 			</g:DockLayoutPanel>

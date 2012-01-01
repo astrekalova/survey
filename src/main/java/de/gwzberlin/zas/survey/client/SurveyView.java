@@ -2,6 +2,8 @@ package de.gwzberlin.zas.survey.client;
 
 import com.google.gwt.user.client.ui.IsWidget;
 
+import de.gwzberlin.zas.survey.shared.Alternatives;
+
 public interface SurveyView extends IsWidget {
 
 	void setPresenter(Presenter presenter);
@@ -10,8 +12,8 @@ public interface SurveyView extends IsWidget {
 	
 	public interface Presenter
 	{
-		
+		void onSelection(Selection selection);
 	}
 
-	void addAlternative(String chatEntry);
+	void addAlternatives(Alternatives alternatives);
 }

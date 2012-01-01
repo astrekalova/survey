@@ -6,6 +6,7 @@ import com.google.gwt.event.shared.EventBus;
 import com.google.gwt.user.client.rpc.AsyncCallback;
 import com.google.gwt.user.client.ui.AcceptsOneWidget;
 
+import de.gwzberlin.zas.survey.shared.Alternatives;
 import de.gwzberlin.zas.survey.shared.SurveyResponse;
 import de.gwzberlin.zas.survey.shared.SurveyServiceAsync;
 
@@ -31,9 +32,10 @@ public class SurveyActivity extends AbstractActivity implements SurveyView.Prese
 	public void onSelection(Selection selection) {
 		
 		SurveyServiceAsync surveyServiceAsync = clientFactory.getSurveyServiceAsync();
-		surveyServiceAsync.sendSelection(selection, new AsyncCallback<Void>() {
+		surveyServiceAsync.sendSelection(selection, new AsyncCallback<Alternatives>() {
 
-			public void onSuccess(Void result) {
+			public void onSuccess(Alternatives result) {
+				view.addAlternatives(result);
 			}
 
 			public void onFailure(Throwable caught) {

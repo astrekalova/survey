@@ -3,7 +3,9 @@ package de.gwzberlin.zas.survey.shared;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Alternatives {
+import com.google.gwt.user.client.rpc.IsSerializable;
+
+public class Alternatives implements IsSerializable {
 
 	private List<Alternative> alternatives = new ArrayList<Alternative>();
 

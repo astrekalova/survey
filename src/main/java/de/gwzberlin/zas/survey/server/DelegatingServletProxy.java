@@ -17,7 +17,7 @@ import org.springframework.web.context.support.WebApplicationContextUtils;
 public class DelegatingServletProxy extends GenericServlet {
 
 	private static final long serialVersionUID = -5304240462170274464L;
-	private static final Logger log = LoggerFactory.getLogger(DelegatingServletProxy.class);
+//	private static final Logger log = LoggerFactory.getLogger(DelegatingServletProxy.class);
 	
 	private Servlet delegate;
 	
@@ -28,7 +28,7 @@ public class DelegatingServletProxy extends GenericServlet {
 		WebApplicationContext applicationContext = WebApplicationContextUtils.getWebApplicationContext(getServletContext());
 		delegate = applicationContext.getBean(getServletName(), Servlet.class);
 		
-		log.debug("Initilizing {} delegate", getServletName());
+//		log.debug("Initilizing {} delegate", getServletName());
 		
 		delegate.init(config);
 	}

@@ -6,7 +6,7 @@ import com.google.gwt.place.shared.Prefix;
 
 public class SurveyPlace extends Place {
 
-	private final SurveyPlaceType type;
+	private SurveyPlaceType type;
 	
 	public SurveyPlace() {
 		this.type = SurveyPlaceType.Question1;
@@ -18,8 +18,12 @@ public class SurveyPlace extends Place {
 
 	public SurveyPlaceType getType() {
 		return type;
-	}
+	}	
 	
+	public void setType(SurveyPlaceType type) {
+		this.type = type;
+	}
+
 	@Prefix("Survey")
 	public static class Tokenizer implements PlaceTokenizer<SurveyPlace> {
 

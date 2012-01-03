@@ -1,4 +1,4 @@
-package de.gwzberlin.zas.survey.client;
+package de.gwzberlin.zas.survey.shared;
 
 import com.google.gwt.user.client.rpc.IsSerializable;
 

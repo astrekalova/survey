@@ -52,8 +52,7 @@ public class SurveyViewImpl extends Composite implements SurveyView {
 	@UiField
 	ListBox materials;
 	
-	@UiField
-//	@UiField(provided = true)
+	@UiField(provided = true)
 	CellTable<Alternative> alternativesTable;
 	
 	@UiField
@@ -63,22 +62,16 @@ public class SurveyViewImpl extends Composite implements SurveyView {
 	DockLayoutPanel infoBox;
 	
 	@UiField
+	Button submitButton;
+	
+	@UiField
 	Button saveButton;
 
 	private Selection selection;
 	
 	public SurveyViewImpl() {
 		
-		initWidget(uiBinder.createAndBindUi(this));		
-
-		for (String color : allColors) {
-			colors.addItem(color);
-		}		
-		for (String material : allMaterials) {
-			materials.addItem(material);
-		}	
-
-//		alternativesTable = new CellTable<Alternative>(100, alternativesDataProvider);
+		alternativesTable = new CellTable<Alternative>(100, alternativesDataProvider);
 		alternativesTable.setWidth("100%");
 		answerOptionSelectionModel = new MultiSelectionModel<Alternative>(alternativesDataProvider);
 		alternativesTable.setSelectionModel(answerOptionSelectionModel, DefaultSelectionEventManager.<Alternative> createCheckboxManager());
@@ -104,6 +97,17 @@ public class SurveyViewImpl extends Composite implements SurveyView {
 		alternativesTable.setColumnWidth(checkboxColumn, 40.0, Unit.PX);
 		
 		alternativesDataProvider.addDataDisplay(alternativesTable);
+
+
+		initWidget(uiBinder.createAndBindUi(this));
+		
+
+		for (String color : allColors) {
+			colors.addItem(color);
+		}		
+		for (String material : allMaterials) {
+			materials.addItem(material);
+		}	
 	}
 	
 	@UiHandler("submitButton")
@@ -112,7 +116,7 @@ public class SurveyViewImpl extends Composite implements SurveyView {
 		selection.setColor(colors.getItemText(colors.getSelectedIndex()));
 		selection.setMaterial(materials.getItemText(materials.getSelectedIndex()));
 		presenter.onProcessingSelection(selection);
-
+		submitButton.setEnabled(false);
 	}
 	
 	@UiHandler("saveButton")

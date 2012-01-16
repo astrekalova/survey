@@ -24,7 +24,7 @@ public class AlternativesServiceImplTest extends ContextAwareTest {
 		Alternatives alternatives = alternativesService.makeAlternatives(selection);
 		
 		assertTrue(alternatives != null);
-		assertTrue(alternatives.getAlternatives().size() > 0);
+		assertTrue(alternatives.getAlternatives().size() == 15);
 	}
 
 }

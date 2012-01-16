@@ -48,13 +48,13 @@
 				<g:south size="50">
 					<g:DockLayoutPanel unit="PX">
 						<g:west size="100">
-							<g:Button ui:field="submitButton" text="Submit" addStyleNames="{style.submitElement}"/>	
+							<g:Button ui:field="submitButton" text="Speichern" addStyleNames="{style.submitElement}"/>	
 						</g:west>
 					</g:DockLayoutPanel>			
 				</g:south>
 			</g:DockLayoutPanel>
 		</g:layer>
-		<g:layer left="100px" top="220px" width="1000px" height="500px">
+		<g:layer left="100px" top="220px" width="800px" height="500px">
 			<g:DockLayoutPanel unit="PX" addStyleNames="{style.infoBox}" ui:field="infoBox">
 				<g:north size="30">
 					<g:Label addStyleNames="{style.title}">Falls es solche Sofas nicht gibt, welche andere ähnliche Wertkombinationen würden sie auswählen?</g:Label>
@@ -67,7 +67,7 @@
 				<g:south size="50">
 					<g:DockLayoutPanel unit="PX">
 						<g:west size="100">
-							<g:Button ui:field="saveButton" text="Submit" addStyleNames="{style.submitElement}"/>	
+							<g:Button ui:field="saveButton" text="Speichern" addStyleNames="{style.submitElement}"/>	
 						</g:west>
 					</g:DockLayoutPanel>										
 				</g:south>

@@ -42,7 +42,7 @@
 		<eqclasses>
 			<eqclass>
 				<number>1</number>
-				<name>red</name>
+				<name>rot</name>
 			</eqclass>
 			<eqclass>
 				<number>1</number>
@@ -99,7 +99,7 @@
 			</eqclass>
 			<eqclass>
 				<number>2</number>
-				<name>red</name>
+				<name>rot</name>
 			</eqclass>
 			<eqclass>
 				<number>2</number>
@@ -144,7 +144,7 @@
 			</eqclass>
 			<eqclass>
 				<number>3</number>
-				<name>red</name>
+				<name>rot</name>
 			</eqclass>
 		</eqclasses>
 	</color>
@@ -173,7 +173,7 @@
 			</eqclass>
 			<eqclass>
 				<number>2</number>
-				<name>red</name>
+				<name>rot</name>
 			</eqclass>
 			<eqclass>
 				<number>2</number>
@@ -194,7 +194,7 @@
 			</eqclass>
 			<eqclass>
 				<number>1</number>
-				<name>red</name>
+				<name>rot</name>
 			</eqclass>
 			<eqclass>
 				<number>2</number>
@@ -231,7 +231,7 @@
 			</eqclass>
 			<eqclass>
 				<number>2</number>
-				<name>red</name>
+				<name>rot</name>
 			</eqclass>
 			<eqclass>
 				<number>2</number>
@@ -268,7 +268,7 @@
 			</eqclass>
 			<eqclass>
 				<number>2</number>
-				<name>red</name>
+				<name>rot</name>
 			</eqclass>
 			<eqclass>
 				<number>2</number>
@@ -309,7 +309,7 @@
 			</eqclass>
 			<eqclass>
 				<number>2</number>
-				<name>red</name>
+				<name>rot</name>
 			</eqclass>
 			<eqclass>
 				<number>2</number>

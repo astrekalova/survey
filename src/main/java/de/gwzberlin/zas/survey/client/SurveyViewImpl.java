@@ -88,8 +88,12 @@ public class SurveyViewImpl extends Composite implements SurveyView {
 		// Create alternatives column
 		TextColumn<Alternative> alternativesColumn = new TextColumn<Alternative>() {
 			@Override
-			public String getValue(Alternative alternative) {				
-				return alternative.getValues().toString();
+			public String getValue(Alternative alternative) {	
+				StringBuilder builder = new StringBuilder();
+				for (String value : alternative.getValues()) {
+					builder.append(value + " ");
+				}
+				return builder.toString();
 			}
 		};
 		alternativesTable.addColumn(alternativesColumn);

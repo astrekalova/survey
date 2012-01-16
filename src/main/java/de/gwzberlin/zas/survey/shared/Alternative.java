@@ -25,4 +25,9 @@ public class Alternative implements IsSerializable {
 	public void setId(int id) {
 		this.id = id;
 	}
+
+	@Override
+	public String toString() {
+		return "Alternative [id=" + id + ", values=" + values + "]";
+	}
 }

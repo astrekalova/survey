@@ -14,12 +14,10 @@ public class TestContextHelper implements BeanFactoryAware, InitializingBean {
 
 	private ConfigurableBeanFactory configurableBeanFactory;
 	
-	@Override
 	public void afterPropertiesSet() throws Exception {
 		configurableBeanFactory.registerScope("session", new SimpleThreadScope());
 	}
 
-	@Override
 	public void setBeanFactory(BeanFactory beanFactory) throws BeansException {
 		if (beanFactory instanceof ConfigurableBeanFactory) {
 			configurableBeanFactory = (ConfigurableBeanFactory) beanFactory;

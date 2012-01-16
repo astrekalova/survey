@@ -5,14 +5,11 @@ import java.util.List;
 
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlElementWrapper;
-import javax.xml.bind.annotation.XmlType;
 
-@XmlType
-public class Color {
+public class Material {
 
 	private String name;
 	private List<EquivalenceClass> eqclasses = new ArrayList<EquivalenceClass>();
-	
 	public String getName() {
 		return name;
 	}
@@ -22,14 +19,14 @@ public class Color {
 	
 	@XmlElementWrapper(name = "eqclasses")
 	@XmlElement(name = "eqclass")
-	public List<EquivalenceClass> getEquivalenceClasses() {
+	public List<EquivalenceClass> getEqclasses() {
 		return eqclasses;
 	}
-	public void setEquivalenceClasses(List<EquivalenceClass> equivalenceClasses) {
-		this.eqclasses = equivalenceClasses;
+	public void setEqclasses(List<EquivalenceClass> eqclasses) {
+		this.eqclasses = eqclasses;
 	}
 	@Override
 	public String toString() {
-		return "Color [name=" + name + ", eqclasses=" + eqclasses + "]";
+		return "Material [name=" + name + ", eqclasses=" + eqclasses + "]";
 	}	
 }

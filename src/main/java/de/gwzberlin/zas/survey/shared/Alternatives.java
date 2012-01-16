@@ -15,5 +15,10 @@ public class Alternatives implements IsSerializable {
 
 	public void setAlternatives(List<Alternative> alternatives) {
 		this.alternatives = alternatives;
+	}
+
+	@Override
+	public String toString() {
+		return "Alternatives [alternatives=" + alternatives + "]";
 	} 
 }

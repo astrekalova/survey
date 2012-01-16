@@ -16,7 +16,12 @@ public class PropertiesDaoImplTest extends ContextAwareTest {
 	@Test
 	public void testGetColors() {		
 		
-		assertTrue(propertiesDao.getColors().getColors().size() > 0);
+		assertTrue(propertiesDao.getColors().getColors().size() == 9);
 	}
 
+	@Test
+	public void testGetMaterials() {
+		
+		assertTrue(propertiesDao.getMaterials().getMaterials().size() == 8);
+	}
 }

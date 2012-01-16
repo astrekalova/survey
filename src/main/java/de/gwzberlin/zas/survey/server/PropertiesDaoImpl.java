@@ -10,6 +10,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
 import de.gwzberlin.zas.survey.types.Colors;
+import de.gwzberlin.zas.survey.types.Materials;
 
 @Service("propertiesDao")
 public class PropertiesDaoImpl implements PropertiesDao {
@@ -35,5 +36,27 @@ public class PropertiesDaoImpl implements PropertiesDao {
 		log.info("data reading was compelted");
 		
 		return colors;
+	}
+
+	public Materials getMaterials() {
+		
+		InputStream is = null;
+		
+		Materials materials = null;
+		
+		is = getClass().getResourceAsStream("/de/gwzberlin/zas/properties/material.xml");	
+		
+			try {
+				JAXBContext context = JAXBContext.newInstance(Materials.class);
+				materials = (Materials) context.createUnmarshaller().unmarshal(is);
+			} catch(JAXBException e) {
+				System.out.println("error parsing xml: ");
+				e.printStackTrace();
+				System.exit(1);
+			}
+			
+		log.info("data reading was compelted");
+		
+		return materials;
 	}
 }

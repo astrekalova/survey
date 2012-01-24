@@ -22,7 +22,6 @@ public class AlternativesServiceImpl implements AlternativesService {
 	@Autowired
 	PropertiesDao propertiesDao;
 
-
 	public Alternatives makeAlternatives(Selection selection) {
 
 		Alternatives alternatives = new Alternatives();
@@ -32,61 +31,65 @@ public class AlternativesServiceImpl implements AlternativesService {
 		
 		List<Alternative> alternativesList = new ArrayList<Alternative>();
 		
-		List<String> colorEqClass1 = new ArrayList<String>();
-		List<String> colorEqClass2 = new ArrayList<String>();
-		List<String> colorEqClass3 = new ArrayList<String>();		
+		List<EquivalenceClass> colorEqClass1 = new ArrayList<EquivalenceClass>();
+		List<EquivalenceClass> colorEqClass2 = new ArrayList<EquivalenceClass>();
+		List<EquivalenceClass> colorEqClass3 = new ArrayList<EquivalenceClass>();		
 		
 		for (EquivalenceClass colorEqClass : selectedColor.getEquivalenceClasses()) {
 			int colorNumber = colorEqClass.getNumber();			
 			if (colorNumber == 1) {
-				colorEqClass1.add(colorEqClass.getName());
+				colorEqClass1.add(colorEqClass);
 			} else if (colorNumber == 2) {
-				colorEqClass2.add(colorEqClass.getName());
+				colorEqClass2.add(colorEqClass);
 			} else if (colorNumber == 3) {
-				colorEqClass3.add(colorEqClass.getName());
+				colorEqClass3.add(colorEqClass);
 			}
 		}
 		
-		List<String> materialEqClass1 = new ArrayList<String>();
-		List<String> materialEqClass2 = new ArrayList<String>();
-		List<String> materialEqClass3 = new ArrayList<String>();
+		List<EquivalenceClass> materialEqClass1 = new ArrayList<EquivalenceClass>();
+		List<EquivalenceClass> materialEqClass2 = new ArrayList<EquivalenceClass>();
+		List<EquivalenceClass> materialEqClass3 = new ArrayList<EquivalenceClass>();
 		
 		for (EquivalenceClass materialEqClass : selectedMaterial.getEqclasses()) {
 			int materialNumber = materialEqClass.getNumber();						
 			if (materialNumber == 1) {
-				materialEqClass1.add(materialEqClass.getName());
+				materialEqClass1.add(materialEqClass);
 			} else if (materialNumber == 2) {
-				materialEqClass2.add(materialEqClass.getName());
+				materialEqClass2.add(materialEqClass);
 			} else if (materialNumber == 3) {
-				materialEqClass3.add(materialEqClass.getName());
+				materialEqClass3.add(materialEqClass);
 			}
 		}
 		
-		for (String color : colorEqClass1) {
-			for (String material : materialEqClass2) {
+		for (EquivalenceClass color : colorEqClass1) {
+			for (EquivalenceClass material : materialEqClass2) {
 				Alternative alt = new Alternative();
-				alt.setValues(Arrays.asList(color, material));
+				alt.setValues(Arrays.asList(color.getName(), material.getName()));
+				alt.setTradeOff(Arrays.asList(color.getNumber(), material.getNumber()));
 				alternativesList.add(alt);
 			}
 		}
 		
-		for (String color : colorEqClass2) {
-			for (String material : materialEqClass1) {
+		for (EquivalenceClass color : colorEqClass2) {
+			for (EquivalenceClass material : materialEqClass1) {
 				Alternative alt = new Alternative();
-				alt.setValues(Arrays.asList(color, material));
+				alt.setValues(Arrays.asList(color.getName(), material.getName()));
+				alt.setTradeOff(Arrays.asList(color.getNumber(), material.getNumber()));
 				alternativesList.add(alt);
 			}
 		}
 		
-		for (String color : colorEqClass3) {
+		for (EquivalenceClass color : colorEqClass3) {
 			Alternative alt = new Alternative();
-			alt.setValues(Arrays.asList(color, selection.getMaterial()));
+			alt.setValues(Arrays.asList(color.getName(), selection.getMaterial()));
+			alt.setTradeOff(Arrays.asList(color.getNumber(), 0));
 			alternativesList.add(alt);
 		}
 		
-		for (String material : materialEqClass3) {
+		for (EquivalenceClass material : materialEqClass3) {
 			Alternative alt = new Alternative();
-			alt.setValues(Arrays.asList(selection.getColor(), material));
+			alt.setValues(Arrays.asList(selection.getColor(), material.getName()));
+			alt.setTradeOff(Arrays.asList(0, material.getNumber()));
 			alternativesList.add(alt);
 		}
 			

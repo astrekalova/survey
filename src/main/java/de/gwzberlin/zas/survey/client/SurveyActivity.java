@@ -3,14 +3,12 @@ package de.gwzberlin.zas.survey.client;
 import java.util.List;
 
 import com.google.gwt.activity.shared.AbstractActivity;
-import com.google.gwt.activity.shared.Activity;
 import com.google.gwt.event.shared.EventBus;
 import com.google.gwt.user.client.rpc.AsyncCallback;
 import com.google.gwt.user.client.ui.AcceptsOneWidget;
 
 import de.gwzberlin.zas.survey.shared.Alternatives;
 import de.gwzberlin.zas.survey.shared.Selection;
-import de.gwzberlin.zas.survey.shared.SurveyResponse;
 import de.gwzberlin.zas.survey.shared.SurveyServiceAsync;
 
 

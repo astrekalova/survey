@@ -9,6 +9,7 @@ public class Alternative implements IsSerializable {
 
 	private int id;
 	private List<String> values = new ArrayList<String>();
+	private List<Integer> tradeOff = new ArrayList<Integer>();
 
 	public List<String> getValues() {
 		return values;
@@ -24,10 +25,19 @@ public class Alternative implements IsSerializable {
 
 	public void setId(int id) {
 		this.id = id;
+	}	
+
+	public List<Integer> getTradeOff() {
+		return tradeOff;
+	}
+
+	public void setTradeOff(List<Integer> tradeOff) {
+		this.tradeOff = tradeOff;
 	}
 
 	@Override
 	public String toString() {
-		return "Alternative [id=" + id + ", values=" + values + "]";
+		return "Alternative [id=" + id + ", values=" + values + ", tradeOff="
+				+ tradeOff + "]";
 	}
 }

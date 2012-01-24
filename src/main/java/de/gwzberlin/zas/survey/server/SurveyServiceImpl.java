@@ -26,7 +26,7 @@ public class SurveyServiceImpl extends RemoteServiceServlet implements SurveySer
 	}
 
 	public void saveSelectedAlternatives(List<Integer> result) {
-		// TODO Auto-generated method stub
+		
 		
 	}
 }

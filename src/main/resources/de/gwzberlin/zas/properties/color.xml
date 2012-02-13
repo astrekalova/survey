@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <colors>
 	<color>
-		<name>rot</name>
+		<name>red</name>
 		<eqclasses>
 			<eqclass>
 				<number>1</number>
@@ -9,31 +9,31 @@
 			</eqclass>
 			<eqclass>
 				<number>1</number>
-				<name>lila</name>
+				<name>violet</name>
 			</eqclass>
 			<eqclass>
 				<number>2</number>
-				<name>schwarz</name>
+				<name>black</name>
 			</eqclass>
 			<eqclass>
 				<number>2</number>
-				<name>weiss</name>
+				<name>white</name>
 			</eqclass>
 			<eqclass>
 				<number>2</number>
-				<name>grau</name>
+				<name>gray</name>
 			</eqclass>
 			<eqclass>
 				<number>2</number>
-				<name>gelb</name>
+				<name>yellow</name>
 			</eqclass>
 			<eqclass>
 				<number>2</number>
-				<name>blau</name>
+				<name>blue</name>
 			</eqclass>
 			<eqclass>
 				<number>3</number>
-				<name>grün</name>
+				<name>green</name>
 			</eqclass>
 		</eqclasses>
 	</color>
@@ -42,40 +42,40 @@
 		<eqclasses>
 			<eqclass>
 				<number>1</number>
-				<name>rot</name>
+				<name>red</name>
 			</eqclass>
 			<eqclass>
 				<number>1</number>
-				<name>gelb</name>
+				<name>yellow</name>
 			</eqclass>
 			<eqclass>
 				<number>2</number>
-				<name>schwarz</name>
+				<name>black</name>
 			</eqclass>
 			<eqclass>
 				<number>2</number>
-				<name>weiss</name>
+				<name>white</name>
 			</eqclass>
 			<eqclass>
 				<number>2</number>
-				<name>grau</name>
+				<name>gray</name>
 			</eqclass>
 			<eqclass>
 				<number>2</number>
-				<name>grün</name>
+				<name>green</name>
 			</eqclass>
 			<eqclass>
 				<number>2</number>
-				<name>lila</name>
+				<name>violet</name>
 			</eqclass>
 			<eqclass>
 				<number>3</number>
-				<name>blau</name>
+				<name>blue</name>
 			</eqclass>
 		</eqclasses>
 	</color>
 	<color>
-		<name>gelb</name>
+		<name>yellow</name>
 		<eqclasses>
 			<eqclass>
 				<number>1</number>
@@ -83,60 +83,60 @@
 			</eqclass>
 			<eqclass>
 				<number>1</number>
-				<name>grün</name>
+				<name>green</name>
 			</eqclass>
 			<eqclass>
 				<number>2</number>
-				<name>schwarz</name>
+				<name>black</name>
 			</eqclass>
 			<eqclass>
 				<number>2</number>
-				<name>weiss</name>
+				<name>white</name>
 			</eqclass>
 			<eqclass>
 				<number>2</number>
-				<name>grau</name>
+				<name>gray</name>
 			</eqclass>
 			<eqclass>
 				<number>2</number>
-				<name>rot</name>
+				<name>red</name>
 			</eqclass>
 			<eqclass>
 				<number>2</number>
-				<name>blau</name>
+				<name>blue</name>
 			</eqclass>
 			<eqclass>
 				<number>3</number>
-				<name>lila</name>
+				<name>violet</name>
 			</eqclass>
 		</eqclasses>
 	</color>
 	<color>
-		<name>grün</name>
+		<name>green</name>
 		<eqclasses>
 			<eqclass>
 				<number>1</number>
-				<name>blau</name>
+				<name>blue</name>
 			</eqclass>
 			<eqclass>
 				<number>1</number>
-				<name>gelb</name>
+				<name>yellow</name>
 			</eqclass>
 			<eqclass>
 				<number>2</number>
-				<name>schwarz</name>
+				<name>black</name>
 			</eqclass>
 			<eqclass>
 				<number>2</number>
-				<name>weiss</name>
+				<name>white</name>
 			</eqclass>
 			<eqclass>
 				<number>2</number>
-				<name>grau</name>
+				<name>gray</name>
 			</eqclass>
 			<eqclass>
 				<number>2</number>
-				<name>lila</name>
+				<name>violet</name>
 			</eqclass>
 			<eqclass>
 				<number>2</number>
@@ -144,40 +144,40 @@
 			</eqclass>
 			<eqclass>
 				<number>3</number>
-				<name>rot</name>
+				<name>red</name>
 			</eqclass>
 		</eqclasses>
 	</color>
 	<color>
-		<name>blau</name>
+		<name>blue</name>
 		<eqclasses>
 			<eqclass>
 				<number>1</number>
-				<name>grün</name>
+				<name>green</name>
 			</eqclass>
 			<eqclass>
 				<number>1</number>
-				<name>lila</name>
+				<name>violet</name>
 			</eqclass>
 			<eqclass>
 				<number>2</number>
-				<name>schwarz</name>
+				<name>black</name>
 			</eqclass>
 			<eqclass>
 				<number>2</number>
-				<name>weiss</name>
+				<name>white</name>
 			</eqclass>
 			<eqclass>
 				<number>2</number>
-				<name>grau</name>
+				<name>gray</name>
 			</eqclass>
 			<eqclass>
 				<number>2</number>
-				<name>rot</name>
+				<name>red</name>
 			</eqclass>
 			<eqclass>
 				<number>2</number>
-				<name>gelb</name>
+				<name>yellow</name>
 			</eqclass>
 			<eqclass>
 				<number>3</number>
@@ -186,31 +186,31 @@
 		</eqclasses>
 	</color>
 	<color>
-		<name>lila</name>
+		<name>violet</name>
 		<eqclasses>
 			<eqclass>
 				<number>1</number>
-				<name>blau</name>
+				<name>blue</name>
 			</eqclass>
 			<eqclass>
 				<number>1</number>
-				<name>rot</name>
+				<name>red</name>
 			</eqclass>
 			<eqclass>
 				<number>2</number>
-				<name>schwarz</name>
+				<name>black</name>
 			</eqclass>
 			<eqclass>
 				<number>2</number>
-				<name>weiss</name>
+				<name>white</name>
 			</eqclass>
 			<eqclass>
 				<number>2</number>
-				<name>grau</name>
+				<name>gray</name>
 			</eqclass>
 			<eqclass>
 				<number>2</number>
-				<name>grün</name>
+				<name>green</name>
 			</eqclass>
 			<eqclass>
 				<number>2</number>
@@ -218,20 +218,20 @@
 			</eqclass>
 			<eqclass>
 				<number>3</number>
-				<name>gelb</name>
+				<name>yellow</name>
 			</eqclass>
 		</eqclasses>
 	</color>
 	<color>
-		<name>schwarz</name>
+		<name>black</name>
 		<eqclasses>
 			<eqclass>
 				<number>1</number>
-				<name>grau</name>
+				<name>gray</name>
 			</eqclass>
 			<eqclass>
 				<number>2</number>
-				<name>rot</name>
+				<name>red</name>
 			</eqclass>
 			<eqclass>
 				<number>2</number>
@@ -239,36 +239,36 @@
 			</eqclass>
 			<eqclass>
 				<number>2</number>
-				<name>gelb</name>
+				<name>yellow</name>
 			</eqclass>
 			<eqclass>
 				<number>2</number>
-				<name>grün</name>
+				<name>green</name>
 			</eqclass>
 			<eqclass>
 				<number>2</number>
-				<name>blau</name>
+				<name>blue</name>
 			</eqclass>
 			<eqclass>
 				<number>2</number>
-				<name>lila</name>
+				<name>violet</name>
 			</eqclass>
 			<eqclass>
 				<number>3</number>
-				<name>weiss</name>
+				<name>white</name>
 			</eqclass>
 		</eqclasses>
 	</color>
 	<color>
-		<name>weiss</name>
+		<name>white</name>
 		<eqclasses>
 			<eqclass>
 				<number>1</number>
-				<name>grau</name>
+				<name>gray</name>
 			</eqclass>
 			<eqclass>
 				<number>2</number>
-				<name>rot</name>
+				<name>red</name>
 			</eqclass>
 			<eqclass>
 				<number>2</number>
@@ -276,40 +276,40 @@
 			</eqclass>
 			<eqclass>
 				<number>2</number>
-				<name>gelb</name>
+				<name>yellow</name>
 			</eqclass>
 			<eqclass>
 				<number>2</number>
-				<name>grün</name>
+				<name>green</name>
 			</eqclass>
 			<eqclass>
 				<number>2</number>
-				<name>blau</name>
+				<name>blue</name>
 			</eqclass>
 			<eqclass>
 				<number>2</number>
-				<name>lila</name>
+				<name>violet</name>
 			</eqclass>
 			<eqclass>
 				<number>3</number>
-				<name>schwarz</name>
+				<name>black</name>
 			</eqclass>
 		</eqclasses>
 	</color>
 	<color>
-		<name>grau</name>
+		<name>gray</name>
 		<eqclasses>
 			<eqclass>
 				<number>1</number>
-				<name>schwarz</name>
+				<name>black</name>
 			</eqclass>
 			<eqclass>
 				<number>1</number>
-				<name>weiss</name>
+				<name>white</name>
 			</eqclass>
 			<eqclass>
 				<number>2</number>
-				<name>rot</name>
+				<name>red</name>
 			</eqclass>
 			<eqclass>
 				<number>2</number>
@@ -317,19 +317,19 @@
 			</eqclass>
 			<eqclass>
 				<number>2</number>
-				<name>gelb</name>
+				<name>yellow</name>
 			</eqclass>
 			<eqclass>
 				<number>2</number>
-				<name>grün</name>
+				<name>green</name>
 			</eqclass>
 			<eqclass>
 				<number>2</number>
-				<name>blau</name>
+				<name>blue</name>
 			</eqclass>
 			<eqclass>
 				<number>2</number>
-				<name>lila</name>
+				<name>violet</name>
 			</eqclass>
 		</eqclasses>
 	</color>

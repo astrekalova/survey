@@ -13,9 +13,6 @@ import javax.persistence.JoinColumn;
 import javax.persistence.OneToMany;
 import javax.persistence.OrderBy;
 
-import de.gwzberlin.zas.survey.shared.Alternative;
-import de.gwzberlin.zas.survey.shared.Selection;
-
 @Entity
 public class UserChoice {
 
@@ -25,12 +22,12 @@ public class UserChoice {
 	
 	private Date date;
 	
-	@OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
-	@OrderBy("date")
-	@JoinColumn(name = "alternative_id")
-	private List<Alternative> alternatives = new ArrayList<Alternative>();
+	private String color;	
+	private String material;
 	
-	private Selection selection;
+	@OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
+	@JoinColumn(name = "userChoice_id")
+	private List<Alternative> alternatives = new ArrayList<Alternative>();
 
 	public Long getId() {
 		return id;
@@ -56,11 +53,19 @@ public class UserChoice {
 		this.alternatives = alternatives;
 	}
 
-	public Selection getSelection() {
-		return selection;
+	public String getColor() {
+		return color;
 	}
 
-	public void setSelection(Selection selection) {
-		this.selection = selection;
+	public void setColor(String color) {
+		this.color = color;
+	}
+
+	public String getMaterial() {
+		return material;
+	}
+
+	public void setMaterial(String material) {
+		this.material = material;
 	}
 }

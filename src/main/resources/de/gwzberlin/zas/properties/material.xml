@@ -1,266 +1,266 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <materials>
 	<material>
-		<name>Rattan</name>		
+		<name>rattan</name>		
 		<eqclasses>			
 			<eqclass>
 				<number>1</number>
-				<name>Plastik</name>
+				<name>plastic</name>
 			</eqclass>
 			<eqclass>
 				<number>2</number>
-				<name>Leder</name>
+				<name>leather</name>
 			</eqclass>
 			<eqclass>
 				<number>2</number>
-				<name>Wildleder</name>
+				<name>suede</name>
 			</eqclass>
 			<eqclass>
 				<number>3</number>
-				<name>Samt</name>
+				<name>velvet</name>
 			</eqclass>
 			<eqclass>
 				<number>3</number>
-				<name>Baumwolle</name>
+				<name>cotton</name>
 			</eqclass>	
 			<eqclass>
 				<number>3</number>
-				<name>Seide</name>
+				<name>silk</name>
 			</eqclass>		
 			<eqclass>
 				<number>3</number>
-				<name>Leinen</name>
+				<name>linen</name>
 			</eqclass>		
 		</eqclasses>
 	</material>	
 	<material>
-		<name>Plastik</name>		
+		<name>plastic</name>		
 		<eqclasses>			
 			<eqclass>
 				<number>1</number>
-				<name>Rattan</name>
+				<name>rattan</name>
 			</eqclass>
 			<eqclass>
 				<number>2</number>
-				<name>Leder</name>
+				<name>leather</name>
 			</eqclass>
 			<eqclass>
 				<number>2</number>
-				<name>Wildleder</name>
+				<name>suede</name>
 			</eqclass>
 			<eqclass>
 				<number>3</number>
-				<name>Samt</name>
+				<name>velvet</name>
 			</eqclass>
 			<eqclass>
 				<number>3</number>
-				<name>Baumwolle</name>
+				<name>cotton</name>
 			</eqclass>	
 			<eqclass>
 				<number>3</number>
-				<name>Seide</name>
+				<name>silk</name>
 			</eqclass>		
 			<eqclass>
 				<number>3</number>
-				<name>Leinen</name>
+				<name>linen</name>
 			</eqclass>		
 		</eqclasses>
 	</material>	
 	<material>
-		<name>Leder</name>		
+		<name>leather</name>		
 		<eqclasses>			
 			<eqclass>
 				<number>2</number>
-				<name>Rattan</name>
+				<name>rattan</name>
 			</eqclass>
 			<eqclass>
 				<number>2</number>
-				<name>Plastik</name>
+				<name>plastic</name>
 			</eqclass>
 			<eqclass>
 				<number>1</number>
-				<name>Wildleder</name>
+				<name>suede</name>
 			</eqclass>
 			<eqclass>
 				<number>2</number>
-				<name>Samt</name>
+				<name>velvet</name>
 			</eqclass>
 			<eqclass>
 				<number>3</number>
-				<name>Baumwolle</name>
+				<name>cotton</name>
 			</eqclass>	
 			<eqclass>
 				<number>3</number>
-				<name>Seide</name>
+				<name>silk</name>
 			</eqclass>		
 			<eqclass>
 				<number>3</number>
-				<name>Leinen</name>
+				<name>linen</name>
 			</eqclass>		
 		</eqclasses>
 	</material>	
 	<material>
-		<name>Wildleder</name>		
+		<name>suede</name>		
 		<eqclasses>			
 			<eqclass>
 				<number>2</number>
-				<name>Rattan</name>
+				<name>rattan</name>
 			</eqclass>
 			<eqclass>
 				<number>2</number>
-				<name>Plastik</name>
+				<name>plastic</name>
 			</eqclass>
 			<eqclass>
 				<number>1</number>
-				<name>Leder</name>
+				<name>leather</name>
 			</eqclass>
 			<eqclass>
 				<number>1</number>
-				<name>Samt</name>
+				<name>velvet</name>
 			</eqclass>
 			<eqclass>
 				<number>3</number>
-				<name>Baumwolle</name>
+				<name>cotton</name>
 			</eqclass>	
 			<eqclass>
 				<number>3</number>
-				<name>Seide</name>
+				<name>silk</name>
 			</eqclass>		
 			<eqclass>
 				<number>3</number>
-				<name>Leinen</name>
+				<name>linen</name>
 			</eqclass>		
 		</eqclasses>
 	</material>	
 	<material>
-		<name>Samt</name>		
+		<name>velvet</name>		
 		<eqclasses>			
 			<eqclass>
 				<number>3</number>
-				<name>Rattan</name>
+				<name>rattan</name>
 			</eqclass>
 			<eqclass>
 				<number>3</number>
-				<name>Plastik</name>
+				<name>plastic</name>
 			</eqclass>
 			<eqclass>
 				<number>2</number>
-				<name>Leder</name>
+				<name>leather</name>
 			</eqclass>
 			<eqclass>
 				<number>1</number>
-				<name>Wildleder</name>
+				<name>suede</name>
 			</eqclass>
 			<eqclass>
 				<number>2</number>
-				<name>Baumwolle</name>
+				<name>cotton</name>
 			</eqclass>	
 			<eqclass>
 				<number>2</number>
-				<name>Seide</name>
+				<name>silk</name>
 			</eqclass>		
 			<eqclass>
 				<number>2</number>
-				<name>Leinen</name>
+				<name>linen</name>
 			</eqclass>		
 		</eqclasses>
 	</material>		
 	<material>
-		<name>Baumwolle</name>		
+		<name>cotton</name>		
 		<eqclasses>			
 			<eqclass>
 				<number>3</number>
-				<name>Rattan</name>
+				<name>rattan</name>
 			</eqclass>
 			<eqclass>
 				<number>3</number>
-				<name>Plastik</name>
+				<name>plastic</name>
 			</eqclass>
 			<eqclass>
 				<number>3</number>
-				<name>Leder</name>
+				<name>leather</name>
 			</eqclass>
 			<eqclass>
 				<number>3</number>
-				<name>Wildleder</name>
+				<name>suede</name>
 			</eqclass>
 			<eqclass>
 				<number>2</number>
-				<name>Samt</name>
+				<name>velvet</name>
 			</eqclass>	
 			<eqclass>
 				<number>1</number>
-				<name>Seide</name>
+				<name>silk</name>
 			</eqclass>		
 			<eqclass>
 				<number>1</number>
-				<name>Leinen</name>
+				<name>linen</name>
 			</eqclass>		
 		</eqclasses>
 	</material>		
 	<material>
-		<name>Seide</name>		
+		<name>silk</name>		
 		<eqclasses>			
 			<eqclass>
 				<number>3</number>
-				<name>Rattan</name>
+				<name>rattan</name>
 			</eqclass>
 			<eqclass>
 				<number>3</number>
-				<name>Plastik</name>
+				<name>plastic</name>
 			</eqclass>
 			<eqclass>
 				<number>3</number>
-				<name>Leder</name>
+				<name>leather</name>
 			</eqclass>
 			<eqclass>
 				<number>3</number>
-				<name>Wildleder</name>
+				<name>suede</name>
 			</eqclass>
 			<eqclass>
 				<number>2</number>
-				<name>Samt</name>
+				<name>velvet</name>
 			</eqclass>	
 			<eqclass>
 				<number>1</number>
-				<name>Baumwolle</name>
+				<name>cotton</name>
 			</eqclass>		
 			<eqclass>
 				<number>2</number>
-				<name>Leinen</name>
+				<name>linen</name>
 			</eqclass>		
 		</eqclasses>
 	</material>		
 	<material>
-		<name>Leinen</name>		
+		<name>linen</name>		
 		<eqclasses>			
 			<eqclass>
 				<number>3</number>
-				<name>Rattan</name>
+				<name>rattan</name>
 			</eqclass>
 			<eqclass>
 				<number>3</number>
-				<name>Plastik</name>
+				<name>plastic</name>
 			</eqclass>
 			<eqclass>
 				<number>3</number>
-				<name>Leder</name>
+				<name>leather</name>
 			</eqclass>
 			<eqclass>
 				<number>3</number>
-				<name>Wildleder</name>
+				<name>suede</name>
 			</eqclass>
 			<eqclass>
 				<number>2</number>
-				<name>Samt</name>
+				<name>velvet</name>
 			</eqclass>		
 			<eqclass>
 				<number>1</number>
-				<name>Baumwolle</name>
+				<name>cotton</name>
 			</eqclass>	
 			<eqclass>
 				<number>2</number>
-				<name>Seide</name>
+				<name>silk</name>
 			</eqclass>		
 		</eqclasses>
 	</material>	

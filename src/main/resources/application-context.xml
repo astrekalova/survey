@@ -15,4 +15,31 @@
 	<context:component-scan base-package="de.gwzberlin.zas.survey" scoped-proxy="interfaces" />
 	<context:annotation-config />
 	
+	<context:property-placeholder location="classpath:survey.properties,classpath*:survey-dev.properties" ignore-resource-not-found="true" />
+		
+	<!-- Persistance -->
+	<bean id="dataSource" class="org.springframework.jdbc.datasource.SimpleDriverDataSource">
+		<property name="driverClass" value="${db.driver}" />
+		<property name="url" value="${db.connectionstring}" />
+		<property name="username" value="${db.username}" />
+		<property name="password" value="${db.password}" />
+	</bean>
+
+	<bean id="transactionManager" class="org.springframework.orm.hibernate3.HibernateTransactionManager">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+
+	<tx:annotation-driven transaction-manager="transactionManager" />
+
+	<bean id="sessionFactory" class="org.springframework.orm.hibernate3.annotation.AnnotationSessionFactoryBean">
+		<property name="dataSource" ref="dataSource" />
+		<property name="packagesToScan" value="de.gwzberlin.zas.survey" />
+		<property name="hibernateProperties">
+			<props>
+				<prop key="hibernate.dialect">${db.dialect}</prop>
+				<prop key="hibernate.show_sql">true</prop>
+				<prop key="hibernate.hbm2ddl.auto">update</prop>
+			</props>
+		</property>
+	</bean>
 </beans>

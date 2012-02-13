@@ -5,15 +5,15 @@ import java.util.List;
 
 import com.google.gwt.user.client.rpc.IsSerializable;
 
-public class Alternatives implements IsSerializable {
+public class AlternativesXml implements IsSerializable {
 
-	private List<Alternative> alternatives = new ArrayList<Alternative>();
+	private List<AlternativeXml> alternatives = new ArrayList<AlternativeXml>();
 
-	public List<Alternative> getAlternatives() {
+	public List<AlternativeXml> getAlternatives() {
 		return alternatives;
 	}
 
-	public void setAlternatives(List<Alternative> alternatives) {
+	public void setAlternatives(List<AlternativeXml> alternatives) {
 		this.alternatives = alternatives;
 	}
 

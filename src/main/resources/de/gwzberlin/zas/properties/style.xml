@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <styles>
 	<style>
-		<name>traditionell</name>		
+		<name>traditional</name>		
 		<eqclasses>			
 			<eqclass>
 				<number>2</number>
@@ -9,11 +9,11 @@
 			</eqclass>
 			<eqclass>
 				<number>1</number>
-				<name>Bauernmöbeln</name>
+				<name>rustic</name>
 			</eqclass>
 			<eqclass>
 				<number>3</number>
-				<name>zeitgenössisch</name>
+				<name>contemporary</name>
 			</eqclass>
 			<eqclass>
 				<number>3</number>
@@ -21,7 +21,7 @@
 			</eqclass>
 			<eqclass>
 				<number>2</number>
-				<name>exotisch</name>
+				<name>exotic</name>
 			</eqclass>		
 		</eqclasses>
 	</style>
@@ -30,15 +30,15 @@
 		<eqclasses>			
 			<eqclass>
 				<number>2</number>
-				<name>traditionell</name>
+				<name>traditional</name>
 			</eqclass>
 			<eqclass>
 				<number>2</number>
-				<name>Bauernmöbeln</name>
+				<name>rustic</name>
 			</eqclass>
 			<eqclass>
 				<number>1</number>
-				<name>zeitgenössisch</name>
+				<name>contemporary</name>
 			</eqclass>
 			<eqclass>
 				<number>1</number>
@@ -46,16 +46,16 @@
 			</eqclass>
 			<eqclass>
 				<number>2</number>
-				<name>exotisch</name>
+				<name>exotic</name>
 			</eqclass>		
 		</eqclasses>
 	</style>	
 	<style>
-		<name>Bauernmöbeln</name>		
+		<name>rustic</name>		
 		<eqclasses>			
 			<eqclass>
 				<number>1</number>
-				<name>traditionell</name>
+				<name>traditional</name>
 			</eqclass>
 			<eqclass>
 				<number>2</number>
@@ -63,7 +63,7 @@
 			</eqclass>
 			<eqclass>
 				<number>3</number>
-				<name>zeitgenössisch</name>
+				<name>contemporary</name>
 			</eqclass>
 			<eqclass>
 				<number>3</number>
@@ -71,12 +71,12 @@
 			</eqclass>
 			<eqclass>
 				<number>2</number>
-				<name>exotisch</name>
+				<name>exotic</name>
 			</eqclass>		
 		</eqclasses>
 	</style>	
 	<style>
-		<name>zeitgenössisch</name>		
+		<name>contemporary</name>		
 		<eqclasses>			
 			<eqclass>
 				<number>1</number>
@@ -84,11 +84,11 @@
 			</eqclass>
 			<eqclass>
 				<number>3</number>
-				<name>Bauernmöbeln</name>
+				<name>rustic</name>
 			</eqclass>
 			<eqclass>
 				<number>3</number>
-				<name>traditionell</name>
+				<name>traditional</name>
 			</eqclass>
 			<eqclass>
 				<number>1</number>
@@ -96,7 +96,7 @@
 			</eqclass>
 			<eqclass>
 				<number>2</number>
-				<name>exotisch</name>
+				<name>exotic</name>
 			</eqclass>		
 		</eqclasses>
 	</style>	
@@ -109,24 +109,24 @@
 			</eqclass>
 			<eqclass>
 				<number>3</number>
-				<name>Bauernmöbeln</name>
+				<name>rustic</name>
 			</eqclass>
 			<eqclass>
 				<number>3</number>
-				<name>traditionell</name>
+				<name>traditional</name>
 			</eqclass>
 			<eqclass>
 				<number>1</number>
-				<name>zeitgenössisch</name>
+				<name>contemporary</name>
 			</eqclass>
 			<eqclass>
 				<number>2</number>
-				<name>exotisch</name>
+				<name>exotic</name>
 			</eqclass>		
 		</eqclasses>
 	</style>	
 	<style>
-		<name>exotisch</name>		
+		<name>exotic</name>		
 		<eqclasses>			
 			<eqclass>
 				<number>2</number>
@@ -134,15 +134,15 @@
 			</eqclass>
 			<eqclass>
 				<number>2</number>
-				<name>Bauernmöbeln</name>
+				<name>rustic</name>
 			</eqclass>
 			<eqclass>
 				<number>2</number>
-				<name>traditionell</name>
+				<name>traditional</name>
 			</eqclass>
 			<eqclass>
 				<number>2</number>
-				<name>zeitgenössisch</name>
+				<name>contemporary</name>
 			</eqclass>
 			<eqclass>
 				<number>2</number>

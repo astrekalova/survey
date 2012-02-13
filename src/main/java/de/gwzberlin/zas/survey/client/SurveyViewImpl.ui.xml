@@ -23,14 +23,14 @@
 		<g:layer left="100px" top="20px" width="1000px" height="30px">
 			<g:DockLayoutPanel unit="PX">
 				<g:center>
-					<g:Label addStyleNames="{style.title}">Stellen Sie sich vor, dass Sie ein Sofa kaufen möchten. Wie würde dieses Sofa aussehen?</g:Label>
+					<g:Label addStyleNames="{style.title}">Imagine that you would like to buy a new sofa for you apartment. How would the sofa look like?</g:Label>
 				</g:center>
 			</g:DockLayoutPanel>
 		</g:layer>
 		<g:layer left="100px" top="50px" width="350px" height="55px">
 			<g:DockLayoutPanel unit="PX">
 				<g:north size="30">
-					<g:Label>Welche Farbe würden Sie für das Sofa auswählen?</g:Label>
+					<g:Label>What color would you choose for the sofa?</g:Label>
 				</g:north>
 				<g:center>
 					<g:ListBox addStyleNames="{style.gwt-ListBox}" ui:field="colors"/>
@@ -40,7 +40,7 @@
 		<g:layer left="100px" top="110px" width="350px" height="105px">
 			<g:DockLayoutPanel unit="PX">
 				<g:north size="30">
-					<g:Label>Welches Material würden Sie für das Sofa auswählen?</g:Label>
+					<g:Label>Which material would you prefer?</g:Label>
 				</g:north>
 				<g:center>
 					<g:ListBox addStyleNames="{style.gwt-ListBox}" ui:field="materials"/>
@@ -48,16 +48,16 @@
 				<g:south size="50">
 					<g:DockLayoutPanel unit="PX">
 						<g:west size="100">
-							<g:Button ui:field="submitButton" text="Speichern" addStyleNames="{style.submitElement}"/>	
+							<g:Button ui:field="submitButton" text="Save" addStyleNames="{style.submitElement}"/>	
 						</g:west>
 					</g:DockLayoutPanel>			
 				</g:south>
 			</g:DockLayoutPanel>
 		</g:layer>
-		<g:layer left="100px" top="220px" width="800px" height="500px">
+		<g:layer left="100px" top="220px" width="800px" height="550px">
 			<g:DockLayoutPanel unit="PX" addStyleNames="{style.infoBox}" ui:field="infoBox">
-				<g:north size="30">
-					<g:Label addStyleNames="{style.title}">Falls es solche Sofas nicht gibt, welche andere ähnliche Wertkombinationen würden sie auswählen?</g:Label>
+				<g:north size="60">
+					<g:Label addStyleNames="{style.title}">Imagine that there is no sofa in stock with the properties you just chose. What alternative color and material values would you choose then?</g:Label>
 				</g:north>
 				<g:center>
 					<g:ScrollPanel ui:field="alternativesScroller">				
@@ -67,7 +67,7 @@
 				<g:south size="50">
 					<g:DockLayoutPanel unit="PX">
 						<g:west size="100">
-							<g:Button ui:field="saveButton" text="Speichern" addStyleNames="{style.submitElement}"/>	
+							<g:Button ui:field="saveButton" text="Save" addStyleNames="{style.submitElement}"/>	
 						</g:west>
 					</g:DockLayoutPanel>										
 				</g:south>

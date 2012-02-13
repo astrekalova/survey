@@ -7,8 +7,8 @@ import com.google.gwt.user.client.rpc.AsyncCallback;
 
 public interface SurveyServiceAsync {
 
-	void sendSelection(Selection selection, AsyncCallback<Alternatives> asyncCallback);
+	void sendSelection(Selection selection, AsyncCallback<AlternativesXml> asyncCallback);
 
-	void saveSelectedAlternatives(List<Integer> result, AsyncCallback<Void> asyncCallback);
+	void saveAlternatives(List<Long> result, AsyncCallback<Void> callback);
 
 }

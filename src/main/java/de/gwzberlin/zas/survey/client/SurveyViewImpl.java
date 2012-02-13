@@ -27,8 +27,8 @@ import com.google.gwt.view.client.DefaultSelectionEventManager;
 import com.google.gwt.view.client.ListDataProvider;
 import com.google.gwt.view.client.MultiSelectionModel;
 
-import de.gwzberlin.zas.survey.shared.Alternative;
-import de.gwzberlin.zas.survey.shared.Alternatives;
+import de.gwzberlin.zas.survey.shared.AlternativeXml;
+import de.gwzberlin.zas.survey.shared.AlternativesXml;
 import de.gwzberlin.zas.survey.shared.Selection;
 
 public class SurveyViewImpl extends Composite implements SurveyView {
@@ -40,11 +40,11 @@ public class SurveyViewImpl extends Composite implements SurveyView {
 
 	private Presenter presenter;
 
-	private List<String> allColors = Arrays.asList("", "rot", "orange", "gelb", "grün", "blau", "lila", "schwarz", "weiss", "grau");
-	private List<String> allMaterials = Arrays.asList("", "Rattan", "Plastik", "Leder", "Wildleder", "Samt","Baumwolle", "Seide", "Leinen");
+	private List<String> allColors = Arrays.asList("", "red", "orange", "yellow", "green", "blue", "violet", "black", "white", "gray");
+	private List<String> allMaterials = Arrays.asList("", "rattan", "plastic", "leather", "suede", "velvet","cotton", "silk", "linen");
 	
-	private ListDataProvider<Alternative> alternativesDataProvider = new ListDataProvider<Alternative>();
-	private MultiSelectionModel<Alternative> answerOptionSelectionModel;
+	private ListDataProvider<AlternativeXml> alternativesDataProvider = new ListDataProvider<AlternativeXml>();
+	private MultiSelectionModel<AlternativeXml> answerOptionSelectionModel;
 	
 	@UiField
 	ListBox colors;
@@ -53,7 +53,7 @@ public class SurveyViewImpl extends Composite implements SurveyView {
 	ListBox materials;
 	
 	@UiField(provided = true)
-	CellTable<Alternative> alternativesTable;
+	CellTable<AlternativeXml> alternativesTable;
 	
 	@UiField
 	ScrollPanel alternativesScroller;
@@ -71,28 +71,28 @@ public class SurveyViewImpl extends Composite implements SurveyView {
 	
 	public SurveyViewImpl() {
 		
-		alternativesTable = new CellTable<Alternative>(100, alternativesDataProvider);
+		alternativesTable = new CellTable<AlternativeXml>(100, alternativesDataProvider);
 		alternativesTable.setWidth("100%");
-		answerOptionSelectionModel = new MultiSelectionModel<Alternative>(alternativesDataProvider);
-		alternativesTable.setSelectionModel(answerOptionSelectionModel, DefaultSelectionEventManager.<Alternative> createCheckboxManager());
+		answerOptionSelectionModel = new MultiSelectionModel<AlternativeXml>(alternativesDataProvider);
+		alternativesTable.setSelectionModel(answerOptionSelectionModel, DefaultSelectionEventManager.<AlternativeXml> createCheckboxManager());
 		
 		// Create checkbox column
-		Column<Alternative, Boolean> checkboxColumn = new Column<Alternative, Boolean>(new CheckboxCell(true, false)) {
+		Column<AlternativeXml, Boolean> checkboxColumn = new Column<AlternativeXml, Boolean>(new CheckboxCell(true, false)) {
 			@Override
-			public Boolean getValue(Alternative object) {
+			public Boolean getValue(AlternativeXml object) {
 				return answerOptionSelectionModel.isSelected(object);
 			}
 		};
 		alternativesTable.addColumn(checkboxColumn);
 		
 		// Create alternatives column
-		TextColumn<Alternative> alternativesColumn = new TextColumn<Alternative>() {
+		TextColumn<AlternativeXml> alternativesColumn = new TextColumn<AlternativeXml>() {
 			@Override
-			public String getValue(Alternative alternative) {	
+			public String getValue(AlternativeXml alternative) {	
 				StringBuilder builder = new StringBuilder();
-				for (String value : alternative.getValues()) {
-					builder.append(value + " ");
-				}
+				String colorName = alternative.getColor().getName();
+				String materialName = alternative.getMaterial().getName();
+				builder.append(colorName + " " + materialName);
 				return builder.toString();
 			}
 		};
@@ -125,9 +125,9 @@ public class SurveyViewImpl extends Composite implements SurveyView {
 	
 	@UiHandler("saveButton")
 	public void onSave(ClickEvent event) {
-		final List<Integer> result = new ArrayList<Integer>();
-		Set<Alternative> selectedSet = answerOptionSelectionModel.getSelectedSet();
-		for (Alternative option : selectedSet) {
+		final List<Long> result = new ArrayList<Long>();
+		Set<AlternativeXml> selectedSet = answerOptionSelectionModel.getSelectedSet();
+		for (AlternativeXml option : selectedSet) {
 			result.add(option.getId());
 		}
 		
@@ -140,10 +140,11 @@ public class SurveyViewImpl extends Composite implements SurveyView {
 	}
 
 	public void clear() {
+		answerOptionSelectionModel.clear();
 		alternativesDataProvider.getList().clear();
 	}
 
-	public void setAlternatives(Alternatives result) {				
+	public void setAlternatives(AlternativesXml result) {				
 		alternativesDataProvider.getList().addAll(result.getAlternatives());
 	}
 	

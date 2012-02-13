@@ -4,7 +4,7 @@ import java.util.List;
 
 import com.google.gwt.user.client.ui.IsWidget;
 
-import de.gwzberlin.zas.survey.shared.Alternatives;
+import de.gwzberlin.zas.survey.shared.AlternativesXml;
 import de.gwzberlin.zas.survey.shared.Selection;
 
 public interface SurveyView extends IsWidget {
@@ -17,10 +17,10 @@ public interface SurveyView extends IsWidget {
 	{
 		void onProcessingSelection(Selection selection);
 
-		void onSavingAlternatives(List<Integer> result);
+		void onSavingAlternatives(List<Long> result);
 	}
 
-	void setAlternatives(Alternatives result);
+	void setAlternatives(AlternativesXml result);
 	
 	void setInfoBoxVisibility(boolean visible);
 }

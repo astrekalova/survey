@@ -11,7 +11,7 @@
 	<name>survey</name>
 	<url>http://maven.apache.org</url>
 
-	
+
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<spring.version>3.0.5.RELEASE</spring.version>
@@ -25,7 +25,7 @@
 			<artifactId>servlet-api</artifactId>
 			<version>2.5</version>
 			<scope>provided</scope>
-		</dependency>		
+		</dependency>
 		<!-- required by Spring annotations -->
 		<dependency>
 			<groupId>org.aspectj</groupId>
@@ -37,6 +37,11 @@
 			<artifactId>junit</artifactId>
 			<version>4.10</version>
 			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>com.google.gwt</groupId>
+			<artifactId>gwt-user</artifactId>
+			<version>${gwt.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>com.google.gwt</groupId>
@@ -52,7 +57,7 @@
 			<groupId>commons-lang</groupId>
 			<artifactId>commons-lang</artifactId>
 			<version>2.6</version>
-		</dependency>		
+		</dependency>
 
 
 		<!-- Spring Framework -->
@@ -107,17 +112,22 @@
 		</dependency>
 		<!-- required by Hibernate -->
 		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-validator</artifactId>
+			<version>4.2.0.Final</version>
+		</dependency>
+		<dependency>
 			<groupId>org.javassist</groupId>
 			<artifactId>javassist</artifactId>
 			<version>3.14.0-GA</version>
 		</dependency>
-		
+
 		<dependency>
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
 			<version>5.1.18</version>
 		</dependency>
-		
+
 		<dependency>
 			<groupId>org.hsqldb</groupId>
 			<artifactId>hsqldb</artifactId>
@@ -127,7 +137,7 @@
 
 	<build>
 		<finalName>${project.artifactId}</finalName>
-				
+
 		<pluginManagement>
 			<plugins>
 				<plugin>
@@ -154,6 +164,6 @@
 					</execution>
 				</executions>
 			</plugin>
-		</plugins>		
+		</plugins>
 	</build>
 </project>

@@ -7,8 +7,10 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import de.gwzberlin.zas.survey.shared.Alternative;
-import de.gwzberlin.zas.survey.shared.Alternatives;
+import de.gwzberlin.zas.survey.db.Alternative;
+import de.gwzberlin.zas.survey.shared.AlternativeXml;
+import de.gwzberlin.zas.survey.shared.AlternativesXml;
+import de.gwzberlin.zas.survey.shared.NameValuePair;
 import de.gwzberlin.zas.survey.shared.Selection;
 import de.gwzberlin.zas.survey.types.Color;
 import de.gwzberlin.zas.survey.types.Colors;
@@ -22,19 +24,23 @@ public class AlternativesServiceImpl implements AlternativesService {
 	@Autowired
 	PropertiesDao propertiesDao;
 
-	public Alternatives makeAlternatives(Selection selection) {
+	public AlternativesXml makeAlternatives(Selection selection) {
 
-		Alternatives alternatives = new Alternatives();
-
+		AlternativesXml alternatives = new AlternativesXml();
+		List<AlternativeXml> alternativesList = new ArrayList<AlternativeXml>();		
+		
 		Color selectedColor = getSelectedColor(selection);
 		Material selectedMaterial = getSelectedMaterial(selection);
-		
-		List<Alternative> alternativesList = new ArrayList<Alternative>();
-		
+
+		// make lists with equivalent classes of all values
 		List<EquivalenceClass> colorEqClass1 = new ArrayList<EquivalenceClass>();
 		List<EquivalenceClass> colorEqClass2 = new ArrayList<EquivalenceClass>();
 		List<EquivalenceClass> colorEqClass3 = new ArrayList<EquivalenceClass>();		
 		
+		List<EquivalenceClass> materialEqClass1 = new ArrayList<EquivalenceClass>();
+		List<EquivalenceClass> materialEqClass2 = new ArrayList<EquivalenceClass>();
+		List<EquivalenceClass> materialEqClass3 = new ArrayList<EquivalenceClass>();		
+
 		for (EquivalenceClass colorEqClass : selectedColor.getEquivalenceClasses()) {
 			int colorNumber = colorEqClass.getNumber();			
 			if (colorNumber == 1) {
@@ -44,11 +50,7 @@ public class AlternativesServiceImpl implements AlternativesService {
 			} else if (colorNumber == 3) {
 				colorEqClass3.add(colorEqClass);
 			}
-		}
-		
-		List<EquivalenceClass> materialEqClass1 = new ArrayList<EquivalenceClass>();
-		List<EquivalenceClass> materialEqClass2 = new ArrayList<EquivalenceClass>();
-		List<EquivalenceClass> materialEqClass3 = new ArrayList<EquivalenceClass>();
+		}		
 		
 		for (EquivalenceClass materialEqClass : selectedMaterial.getEqclasses()) {
 			int materialNumber = materialEqClass.getNumber();						
@@ -59,42 +61,43 @@ public class AlternativesServiceImpl implements AlternativesService {
 			} else if (materialNumber == 3) {
 				materialEqClass3.add(materialEqClass);
 			}
-		}
+		}		
+		
+		// combine equivalent classes to create alternatives
 		
 		for (EquivalenceClass color : colorEqClass1) {
 			for (EquivalenceClass material : materialEqClass2) {
-				Alternative alt = new Alternative();
-				alt.setValues(Arrays.asList(color.getName(), material.getName()));
-				alt.setTradeOff(Arrays.asList(color.getNumber(), material.getNumber()));
+				AlternativeXml alt = new AlternativeXml();
+				alt.setColor(new NameValuePair(color.getName(), color.getNumber()));
+				alt.setMaterial(new NameValuePair(material.getName(), material.getNumber()));
 				alternativesList.add(alt);
 			}
 		}
 		
 		for (EquivalenceClass color : colorEqClass2) {
 			for (EquivalenceClass material : materialEqClass1) {
-				Alternative alt = new Alternative();
-				alt.setValues(Arrays.asList(color.getName(), material.getName()));
-				alt.setTradeOff(Arrays.asList(color.getNumber(), material.getNumber()));
+				AlternativeXml alt = new AlternativeXml();
+				alt.setColor(new NameValuePair(color.getName(), color.getNumber()));
+				alt.setMaterial(new NameValuePair(material.getName(), material.getNumber()));
 				alternativesList.add(alt);
 			}
 		}
 		
 		for (EquivalenceClass color : colorEqClass3) {
-			Alternative alt = new Alternative();
-			alt.setValues(Arrays.asList(color.getName(), selection.getMaterial()));
-			alt.setTradeOff(Arrays.asList(color.getNumber(), 0));
+			AlternativeXml alt = new AlternativeXml();
+			alt.setColor(new NameValuePair(color.getName(), color.getNumber()));
+			alt.setMaterial(new NameValuePair(selection.getMaterial(), 0));
 			alternativesList.add(alt);
 		}
 		
 		for (EquivalenceClass material : materialEqClass3) {
-			Alternative alt = new Alternative();
-			alt.setValues(Arrays.asList(selection.getColor(), material.getName()));
-			alt.setTradeOff(Arrays.asList(0, material.getNumber()));
+			AlternativeXml alt = new AlternativeXml();
+			alt.setColor(new NameValuePair(selection.getColor(), 0));
+			alt.setMaterial(new NameValuePair(material.getName(), material.getNumber()));
 			alternativesList.add(alt);
 		}
 			
-		alternatives.setAlternatives(alternativesList);
-		
+		alternatives.setAlternatives(alternativesList);		
 		return alternatives;
 	}
 

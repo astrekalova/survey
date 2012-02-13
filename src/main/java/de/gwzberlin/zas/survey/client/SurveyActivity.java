@@ -7,7 +7,7 @@ import com.google.gwt.event.shared.EventBus;
 import com.google.gwt.user.client.rpc.AsyncCallback;
 import com.google.gwt.user.client.ui.AcceptsOneWidget;
 
-import de.gwzberlin.zas.survey.shared.Alternatives;
+import de.gwzberlin.zas.survey.shared.AlternativesXml;
 import de.gwzberlin.zas.survey.shared.Selection;
 import de.gwzberlin.zas.survey.shared.SurveyServiceAsync;
 
@@ -38,10 +38,12 @@ public class SurveyActivity extends AbstractActivity implements SurveyView.Prese
 	
 	public void onProcessingSelection(Selection selection) {
 		
+		view.clear();
+		
 		SurveyServiceAsync surveyServiceAsync = clientFactory.getSurveyServiceAsync();
-		surveyServiceAsync.sendSelection(selection, new AsyncCallback<Alternatives>() {
+		surveyServiceAsync.sendSelection(selection, new AsyncCallback<AlternativesXml>() {
 
-			public void onSuccess(Alternatives result) {
+			public void onSuccess(AlternativesXml result) {
 				place.setType(SurveyPlaceType.Alternatives);
 				view.setInfoBoxVisibility(true);
 				view.setAlternatives(result);
@@ -52,16 +54,19 @@ public class SurveyActivity extends AbstractActivity implements SurveyView.Prese
 		});
 	}
 
-	public void onSavingAlternatives(List<Integer> result) {
+	public void onSavingAlternatives(List<Long> alternativeIds) {
 		
 		SurveyServiceAsync surveyServiceAsync = clientFactory.getSurveyServiceAsync();
-		surveyServiceAsync.saveSelectedAlternatives(result, new AsyncCallback<Void>() {
-			
+		surveyServiceAsync.saveAlternatives(alternativeIds, new AsyncCallback<Void>() {
+
 			public void onSuccess(Void result) {
+				place.setType(SurveyPlaceType.Question2);
+				view.setInfoBoxVisibility(true);
 			}
 
 			public void onFailure(Throwable caught) {
-			}			
-		});		
+			}
+		});
+		
 	}
 }
